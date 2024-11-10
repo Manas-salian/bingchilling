@@ -1,0 +1,184 @@
+body {
+  background-color: #1e1e1e; /* Dark background */
+  color: #e0e0e0; /* Light text */
+  font-family: 'Poppins', sans-serif; /* Modern font */
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #2a2a2a; /* Slightly lighter dark header */
+  padding: 1rem 0;
+  text-align: center;
+}
+
+h1 {
+  color: #f2b807; /* Gold/yellowish title */
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav li {
+  margin: 0 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #e0e0e0;
+  font-weight: 500;
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+nav a:hover {
+  color: #f2b807; /* Gold hover effect */
+}
+
+main {
+  padding: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+
+.cake-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow cakes to wrap on smaller screens */
+  justify-content: center;
+  gap: 2rem;
+}
+
+.cake {
+  background-color: #2a2a2a; /* Darker cake background */
+  border-radius: 8px;
+  padding: 1.5rem;
+  width: calc(33.33% - 2rem); /* Adjust width for 3-column layout */
+  box-sizing: border-box;
+  text-align: center;
+  transition: transform 0.2s ease; /* Smooth hover effect */
+}
+
+
+.cake:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cake img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  color: #f2b807; /* Gold headings */
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+h3 {
+  color: #e0e0e0;
+  margin-bottom: 0.5rem;
+}
+
+
+button {
+  background-color: #f2b807; /* Gold button */
+  color: #1e1e1e;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #d9a404; /* Slightly darker gold on hover */
+}
+
+
+#cart {
+  background-color: #2a2a2a;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-top: 2rem;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+
+#cart button { /* Override button styles for remove button */
+  background-color: #d63031; /* Red remove button */
+  color: white;
+}
+
+#cart button:hover {
+  background-color: #c0392b;
+}
+
+
+@media (max-width: 768px) {  /* Adjust for smaller screens */
+  .cake {
+      width: calc(50% - 2rem); /* 2 cakes per row */
+  }
+}
+
+@media (max-width: 500px) {
+  .cake {
+      width: 100%; /* 1 cake per row on very small screens */
+  }
+}
+
+/* ... previous styles ... */
+
+.about-section {
+  padding: 4rem 2rem; /* Adjust padding as needed */
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  gap: 2rem; /* Space between content and image */
+  background-color: #2a2a2a; /* Darker background for the card */
+  border-radius: 8px;
+  padding: 2rem;
+}
+
+.about-content {
+  flex: 1; /* Allows content to grow */
+}
+
+.about-image {
+  flex: 1; /* Equal width for image */
+  max-width: 500px; /* Limit image width */
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .about-container {
+      flex-direction: column; /* Stack content and image vertically on smaller screens */
+  }
+  .about-image {
+      max-width: 100%; /* Image takes full width */
+      margin-top: 2rem;
+  }
+}
